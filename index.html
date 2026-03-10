@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AutoVision - Vehicle Plate Recognition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-overlay">
+<div class="background-text">
+<h2>Optimized for your location</h2>
+<p>Works in all environments</p>
+</div>
+</div>
+
+<header>
+<div class="logo">AutoVision ANPR</div>
+
+<nav>
+<a href="#" onclick="showSection('home')">Home</a>
+<a href="#" onclick="showSection('scan')">Scan</a>
+<a href="#" onclick="showSection('history')">History</a>
+<a href="#" onclick="showSection('profile')">Profile</a>
+</nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="section active">
+
+<h1>Automatic Number Plate Recognition System</h1>
+
+<p class="subtitle">
+Detect and recognize vehicle number plates using computer vision and OCR.
+</p>
+
+<div class="home-buttons">
+
+<button onclick="showSection('scan')">Scan Vehicle Plate</button>
+
+<button onclick="showSection('history')">View Scan History</button>
+
+<button onclick="showSection('profile')">My Profile</button>
+
+</div>
+
+</section>
+
+
+
+<!-- SCAN PAGE -->
+
+<section id="scan" class="section">
+
+<h2>Scan Vehicle Number Plate</h2>
+
+<p>Upload an image containing a vehicle number plate.</p>
+
+<input type="file" id="imageInput" accept="image/*">
+
+<br><br>
+
+<button onclick="uploadImage()">Detect Plate</button>
+
+<div id="loading" class="loader hidden"></div>
+
+<div id="result" class="result-card hidden">
+
+<h3>Recognition Result</h3>
+
+<img id="preview">
+
+<p><strong>Plate Number:</strong> <span id="plate"></span></p>
+
+<p><strong>Confidence:</strong> <span id="confidence"></span></p>
+
+<div id="vehicleInfo"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- HISTORY -->
+
+<section id="history" class="section">
+
+<h2>Previous Scans</h2>
+
+<div id="historyContainer" class="history-container">
+<p>No scans yet</p>
+</div>
+
+</section>
+
+
+
+<!-- PROFILE -->
+
+<section id="profile" class="section">
+
+<h2>User Profile</h2>
+
+<div class="profile-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<div>
+<p><strong>Name:</strong> Student User</p>
+<p><strong>Role:</strong> Frontend Developer</p>
+<p><strong>Project:</strong> ANPR System</p>
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
